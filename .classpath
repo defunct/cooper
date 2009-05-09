@@ -2,6 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/strata"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tuple"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tuple-ordered"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="var" path="M2_REPO/com/goodworkalan/ilk/0.1.X/ilk-0.1.X.jar" sourcepath="M2_REPO/com/goodworkalan/ilk/0.1.X/ilk-0.1.X-sources.jar">
 		<attributes>
@@ -40,6 +43,5 @@
 			<attribute name="javadoc_location" value="jar:file:/Users/alan/.m2/repository/com/goodworkalan/tuple-partial/0.1.X/tuple-partial-0.1.X-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/strata"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
