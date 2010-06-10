@@ -1,25 +1,28 @@
 package com.goodworkalan.strata.mix;
 
-import com.goodworkalan.go.go.Artifact;
 import com.goodworkalan.mix.ProjectModule;
 import com.goodworkalan.mix.builder.Builder;
-import com.goodworkalan.mix.builder.JavaProject;
+import com.goodworkalan.mix.cookbook.JavaProject;
 
-public class CooperProject extends ProjectModule {
-    @Override
+/**
+ * Builds the project definition for Cooper.
+ *
+ * @author Alan Gutierrez
+ */
+public class CooperProject implements ProjectModule {
+    /**
+     * Build the project definition for Cooper.
+     *
+     * @param builder
+     *          The project builder.
+     */
     public void build(Builder builder) {
         builder
             .cookbook(JavaProject.class)
-                .produces(new Artifact("com.goodworkalan/cooper/0.1"))
-                .main()
-                    .depends()
-                        .artifact(new Artifact("com.goodworkalan/strata/0.1"))
-                        .end()
-                    .end()
-                .test()
-                    .depends()
-                        .artifact(new Artifact("org.testng/testng/5.10/jdk15"))
-                        .end()
+                .produces("com.goodworkalan/cooper/0.1")
+                .depends()
+                    .production("com.goodworkalan/strata/0.+1")
+                    .development("org.testng/testng-jdk15/5.10")
                     .end()
                 .end()
             .end();
